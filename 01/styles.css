@@ -1,0 +1,115 @@
+/* General styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.4rem;
+	color: #fff;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+/* End general styles */
+.primary-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	transition: background-color 0.5s;
+}
+.container {
+	max-width: 120rem;
+	margin-inline: auto;
+	padding-inline: 1.5rem;
+}
+.navbar {
+	height: 7.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+	transition: height 0.25s;
+}
+.logo {
+	font-size: 2.4rem;
+	font-weight: 900;
+}
+.nav-list {
+	list-style: none;
+	display: flex;
+	gap: 2.5rem;
+	margin-left: 5rem;
+	margin-right: auto;
+}
+.nav-link {
+	transition: color 0.25s;
+}
+.nav-link:hover {
+	color: #d3d3d3;
+}
+.button {
+	display: inline-block;
+	background-color: #fff;
+	color: #313131;
+	padding: 0.8rem 2rem;
+	border-radius: 2rem;
+	transition: background-color 0.25s;
+}
+.button:hover {
+	background-color: #d3d3d3;
+}
+header.active {
+	background-color: #fff;
+	box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+}
+header.active .navbar {
+	height: 6rem;
+}
+header.active .logo,
+header.active .nav-link {
+	color: #313131;
+}
+header.active .nav-link:hover {
+	color: #808080;
+}
+header.active .button {
+	background-color: #313131;
+	color: #fff;
+}
+header.active .button:hover {
+	background-color: #151515;
+}
+
+/* Hero Demo Content*/
+.hero {
+	width: 100%;
+	height: 100vh;
+	background: url('mountain-large.jpg') center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero::after {
+	content: '';
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.demo-content {
+	width: 100%;
+	height: 200vh;
+	background-color: #fff;
+}
+/* Hero end*/
